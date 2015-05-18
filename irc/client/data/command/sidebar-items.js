@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["CapSubCommand","A list of all of the subcommands for the capabilities extension."],["Command","List of all client commands as defined in RFC 2812. This also includes commands from the capabilities extension. Additionally, this includes some common additional commands from popular IRCds."]]});

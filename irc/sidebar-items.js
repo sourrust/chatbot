@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["client","A simple, thread-safe IRC client library."],["server","A simple, thread-safe IRC server library."]]});

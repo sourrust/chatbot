@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Message","Represents a WebSocket message."]],"type":[["WsClient",""]],"struct":[["RtmClient","The actual messaging client."],["Team","Contains information about the team the bot is logged into."]],"trait":[["MessageHandler","Implement this trait in your code to handle message events"]]});

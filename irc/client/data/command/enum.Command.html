@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Command` enum in crate `irc`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Command">
+
+    <title>irc::client::data::command::Command - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>irc</a>::<wbr><a href='../../index.html'>client</a>::<wbr><a href='../index.html'>data</a>::<wbr><a href='index.html'>command</a></p><script>window.sidebarCurrent = {name: 'Command', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../../index.html'>irc</a>::<wbr><a href='../../index.html'>client</a>::<wbr><a href='../index.html'>data</a>::<wbr><a href='index.html'>command</a>::<wbr><a class='enum' href=''>Command</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]</a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-1081' href='../../../../src/irc/client/data/command.rs.html#12-150'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Command {
+    PASS(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    NICK(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    USER(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    OPER(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    MODE(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    SERVICE(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    QUIT(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    SQUIT(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    JOIN(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    PART(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    TOPIC(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    NAMES(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    LIST(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    INVITE(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    KICK(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    PRIVMSG(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    NOTICE(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    MOTD(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    LUSERS(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    VERSION(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    STATS(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    LINKS(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    TIME(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    CONNECT(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    TRACE(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    ADMIN(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    INFO(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    SERVLIST(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    SQUERY(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    WHO(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;),
+    WHOIS(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    WHOWAS(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    KILL(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    PING(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    PONG(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    ERROR(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    AWAY(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    REHASH,
+    DIE,
+    RESTART,
+    SUMMON(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    USERS(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    WALLOPS(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    USERHOST(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    ISON(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    SAJOIN(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    SAMODE(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+    SANICK(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    SAPART(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    SAQUIT(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    NICKSERV(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    CHANSERV(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    OPERSERV(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    BOTSERV(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    HOSTSERV(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    MEMOSERV(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    CAP(<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='../../../../irc/client/data/command/enum.CapSubCommand.html' title='irc::client::data::command::CapSubCommand'>CapSubCommand</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;),
+}</pre><div class='docblock'><p>List of all client commands as defined in <a href="http://tools.ietf.org/html/rfc2812">RFC 2812</a>. This
+also includes commands from the
+<a href="https://tools.ietf.org/html/draft-mitchell-irc-capabilities-01">capabilities extension</a>.
+Additionally, this includes some common additional commands from popular IRCds.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.PASS'><a class='stability Unmarked' title='No stability level'></a><code>PASS</code></td><td><div class='docblock'><p>PASS :password</p>
+</div></td></tr><tr><td id='variant.NICK'><a class='stability Unmarked' title='No stability level'></a><code>NICK</code></td><td><div class='docblock'><p>NICK :nickname</p>
+</div></td></tr><tr><td id='variant.USER'><a class='stability Unmarked' title='No stability level'></a><code>USER</code></td><td><div class='docblock'><p>USER user mode * :realname</p>
+</div></td></tr><tr><td id='variant.OPER'><a class='stability Unmarked' title='No stability level'></a><code>OPER</code></td><td><div class='docblock'><p>OPER name :password</p>
+</div></td></tr><tr><td id='variant.MODE'><a class='stability Unmarked' title='No stability level'></a><code>MODE</code></td><td><div class='docblock'><p>MODE nickname modes
+MODE channel modes [modeparams]</p>
+</div></td></tr><tr><td id='variant.SERVICE'><a class='stability Unmarked' title='No stability level'></a><code>SERVICE</code></td><td><div class='docblock'><p>SERVICE nickname reserved distribution type reserved :info</p>
+</div></td></tr><tr><td id='variant.QUIT'><a class='stability Unmarked' title='No stability level'></a><code>QUIT</code></td><td><div class='docblock'><p>QUIT :comment</p>
+</div></td></tr><tr><td id='variant.SQUIT'><a class='stability Unmarked' title='No stability level'></a><code>SQUIT</code></td><td><div class='docblock'><p>SQUIT server :comment</p>
+</div></td></tr><tr><td id='variant.JOIN'><a class='stability Unmarked' title='No stability level'></a><code>JOIN</code></td><td><div class='docblock'><p>JOIN chanlist [chankeys]</p>
+</div></td></tr><tr><td id='variant.PART'><a class='stability Unmarked' title='No stability level'></a><code>PART</code></td><td><div class='docblock'><p>PART chanlist :[comment]</p>
+</div></td></tr><tr><td id='variant.TOPIC'><a class='stability Unmarked' title='No stability level'></a><code>TOPIC</code></td><td><div class='docblock'><p>TOPIC channel :[topic]</p>
+</div></td></tr><tr><td id='variant.NAMES'><a class='stability Unmarked' title='No stability level'></a><code>NAMES</code></td><td><div class='docblock'><p>NAMES [chanlist :[target]]</p>
+</div></td></tr><tr><td id='variant.LIST'><a class='stability Unmarked' title='No stability level'></a><code>LIST</code></td><td><div class='docblock'><p>LIST [chanlist :[target]]</p>
+</div></td></tr><tr><td id='variant.INVITE'><a class='stability Unmarked' title='No stability level'></a><code>INVITE</code></td><td><div class='docblock'><p>INVITE nickname channel</p>
+</div></td></tr><tr><td id='variant.KICK'><a class='stability Unmarked' title='No stability level'></a><code>KICK</code></td><td><div class='docblock'><p>KICK chanlist userlist :[comment]</p>
+</div></td></tr><tr><td id='variant.PRIVMSG'><a class='stability Unmarked' title='No stability level'></a><code>PRIVMSG</code></td><td><div class='docblock'><p>PRIVMSG msgtarget :message</p>
+</div></td></tr><tr><td id='variant.NOTICE'><a class='stability Unmarked' title='No stability level'></a><code>NOTICE</code></td><td><div class='docblock'><p>NOTICE msgtarget :message</p>
+</div></td></tr><tr><td id='variant.MOTD'><a class='stability Unmarked' title='No stability level'></a><code>MOTD</code></td><td><div class='docblock'><p>MOTD :[target]</p>
+</div></td></tr><tr><td id='variant.LUSERS'><a class='stability Unmarked' title='No stability level'></a><code>LUSERS</code></td><td><div class='docblock'><p>LUSERS [mask :[target]]</p>
+</div></td></tr><tr><td id='variant.VERSION'><a class='stability Unmarked' title='No stability level'></a><code>VERSION</code></td><td><div class='docblock'><p>VERSION :[target]</p>
+</div></td></tr><tr><td id='variant.STATS'><a class='stability Unmarked' title='No stability level'></a><code>STATS</code></td><td><div class='docblock'><p>STATS [query :[target]]</p>
+</div></td></tr><tr><td id='variant.LINKS'><a class='stability Unmarked' title='No stability level'></a><code>LINKS</code></td><td><div class='docblock'><p>LINKS [[remote server] server :mask]</p>
+</div></td></tr><tr><td id='variant.TIME'><a class='stability Unmarked' title='No stability level'></a><code>TIME</code></td><td><div class='docblock'><p>TIME :[target]</p>
+</div></td></tr><tr><td id='variant.CONNECT'><a class='stability Unmarked' title='No stability level'></a><code>CONNECT</code></td><td><div class='docblock'><p>CONNECT target server port :[remote server]</p>
+</div></td></tr><tr><td id='variant.TRACE'><a class='stability Unmarked' title='No stability level'></a><code>TRACE</code></td><td><div class='docblock'><p>TRACE :[target]</p>
+</div></td></tr><tr><td id='variant.ADMIN'><a class='stability Unmarked' title='No stability level'></a><code>ADMIN</code></td><td><div class='docblock'><p>ADMIN :[target]</p>
+</div></td></tr><tr><td id='variant.INFO'><a class='stability Unmarked' title='No stability level'></a><code>INFO</code></td><td><div class='docblock'><p>INFO :[target]</p>
+</div></td></tr><tr><td id='variant.SERVLIST'><a class='stability Unmarked' title='No stability level'></a><code>SERVLIST</code></td><td><div class='docblock'><p>SERVLIST [mask :[type]]</p>
+</div></td></tr><tr><td id='variant.SQUERY'><a class='stability Unmarked' title='No stability level'></a><code>SQUERY</code></td><td><div class='docblock'><p>SQUERY servicename text</p>
+</div></td></tr><tr><td id='variant.WHO'><a class='stability Unmarked' title='No stability level'></a><code>WHO</code></td><td><div class='docblock'><p>WHO [mask [&quot;o&quot;]]</p>
+</div></td></tr><tr><td id='variant.WHOIS'><a class='stability Unmarked' title='No stability level'></a><code>WHOIS</code></td><td><div class='docblock'><p>WHOIS [target] masklist</p>
+</div></td></tr><tr><td id='variant.WHOWAS'><a class='stability Unmarked' title='No stability level'></a><code>WHOWAS</code></td><td><div class='docblock'><p>WHOWAS nicklist [count :[target]]</p>
+</div></td></tr><tr><td id='variant.KILL'><a class='stability Unmarked' title='No stability level'></a><code>KILL</code></td><td><div class='docblock'><p>KILL nickname :comment</p>
+</div></td></tr><tr><td id='variant.PING'><a class='stability Unmarked' title='No stability level'></a><code>PING</code></td><td><div class='docblock'><p>PING server1 :[server2]</p>
+</div></td></tr><tr><td id='variant.PONG'><a class='stability Unmarked' title='No stability level'></a><code>PONG</code></td><td><div class='docblock'><p>PONG server :[server2]</p>
+</div></td></tr><tr><td id='variant.ERROR'><a class='stability Unmarked' title='No stability level'></a><code>ERROR</code></td><td><div class='docblock'><p>ERROR :message</p>
+</div></td></tr><tr><td id='variant.AWAY'><a class='stability Unmarked' title='No stability level'></a><code>AWAY</code></td><td><div class='docblock'><p>AWAY :[message]</p>
+</div></td></tr><tr><td id='variant.REHASH'><a class='stability Unmarked' title='No stability level'></a><code>REHASH</code></td><td><div class='docblock'><p>REHASH</p>
+</div></td></tr><tr><td id='variant.DIE'><a class='stability Unmarked' title='No stability level'></a><code>DIE</code></td><td><div class='docblock'><p>DIE</p>
+</div></td></tr><tr><td id='variant.RESTART'><a class='stability Unmarked' title='No stability level'></a><code>RESTART</code></td><td><div class='docblock'><p>RESTART</p>
+</div></td></tr><tr><td id='variant.SUMMON'><a class='stability Unmarked' title='No stability level'></a><code>SUMMON</code></td><td><div class='docblock'><p>SUMMON user [target :[channel]]</p>
+</div></td></tr><tr><td id='variant.USERS'><a class='stability Unmarked' title='No stability level'></a><code>USERS</code></td><td><div class='docblock'><p>USERS :[target]</p>
+</div></td></tr><tr><td id='variant.WALLOPS'><a class='stability Unmarked' title='No stability level'></a><code>WALLOPS</code></td><td><div class='docblock'><p>WALLOPS :Text to be sent</p>
+</div></td></tr><tr><td id='variant.USERHOST'><a class='stability Unmarked' title='No stability level'></a><code>USERHOST</code></td><td><div class='docblock'><p>USERHOST space-separated nicklist</p>
+</div></td></tr><tr><td id='variant.ISON'><a class='stability Unmarked' title='No stability level'></a><code>ISON</code></td><td><div class='docblock'><p>ISON space-separated nicklist</p>
+</div></td></tr><tr><td id='variant.SAJOIN'><a class='stability Unmarked' title='No stability level'></a><code>SAJOIN</code></td><td><div class='docblock'><p>SAJOIN nickname channel</p>
+</div></td></tr><tr><td id='variant.SAMODE'><a class='stability Unmarked' title='No stability level'></a><code>SAMODE</code></td><td><div class='docblock'><p>SAMODE target modes [modeparams]</p>
+</div></td></tr><tr><td id='variant.SANICK'><a class='stability Unmarked' title='No stability level'></a><code>SANICK</code></td><td><div class='docblock'><p>SANICK old nickname new nickname</p>
+</div></td></tr><tr><td id='variant.SAPART'><a class='stability Unmarked' title='No stability level'></a><code>SAPART</code></td><td><div class='docblock'><p>SAPART nickname :comment</p>
+</div></td></tr><tr><td id='variant.SAQUIT'><a class='stability Unmarked' title='No stability level'></a><code>SAQUIT</code></td><td><div class='docblock'><p>SAQUIT nickname :comment</p>
+</div></td></tr><tr><td id='variant.NICKSERV'><a class='stability Unmarked' title='No stability level'></a><code>NICKSERV</code></td><td><div class='docblock'><p>NICKSERV message</p>
+</div></td></tr><tr><td id='variant.CHANSERV'><a class='stability Unmarked' title='No stability level'></a><code>CHANSERV</code></td><td><div class='docblock'><p>CHANSERV message</p>
+</div></td></tr><tr><td id='variant.OPERSERV'><a class='stability Unmarked' title='No stability level'></a><code>OPERSERV</code></td><td><div class='docblock'><p>OPERSERV message</p>
+</div></td></tr><tr><td id='variant.BOTSERV'><a class='stability Unmarked' title='No stability level'></a><code>BOTSERV</code></td><td><div class='docblock'><p>BOTSERV message</p>
+</div></td></tr><tr><td id='variant.HOSTSERV'><a class='stability Unmarked' title='No stability level'></a><code>HOSTSERV</code></td><td><div class='docblock'><p>HOSTSERV message</p>
+</div></td></tr><tr><td id='variant.MEMOSERV'><a class='stability Unmarked' title='No stability level'></a><code>MEMOSERV</code></td><td><div class='docblock'><p>MEMOSERV message</p>
+</div></td></tr><tr><td id='variant.CAP'><a class='stability Unmarked' title='No stability level'></a><code>CAP</code></td><td><div class='docblock'><p>CAP [*] COMMAND [*] :[param]</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a></code></h3><div class='impl-items'><h4 id='method.from_message' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_message' class='fnname'>from_message</a>(m: &amp;<a class='struct' href='../../../../irc/client/data/message/struct.Message.html' title='irc::client::data::message::Message'>Message</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a>&gt;</code></h4>
+<div class='docblock'><p>Converts a Message into a Command.</p>
+</div><h4 id='method.from_message_io' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_message_io' class='fnname'>from_message_io</a>(m: <a class='type' href='http://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='struct' href='../../../../irc/client/data/message/struct.Message.html' title='irc::client::data::message::Message'>Message</a>&gt;) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a>&gt;</code></h4>
+<div class='docblock'><p>Converts a potential Message result into a potential Command result.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='trait' href='../../../../irc/client/data/message/trait.ToMessage.html' title='irc::client::data::message::ToMessage'>ToMessage</a> for <a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a></code></h3><div class='impl-items'><h4 id='method.to_message' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../../../irc/client/data/message/trait.ToMessage.html#method.to_message' class='fnname'>to_message</a>(&amp;self) -&gt; <a class='struct' href='../../../../irc/client/data/message/struct.Message.html' title='irc::client::data::message::Message'>Message</a></code></h4>
+<div class='docblock'><p>Converts a Command into a Message.</p>
+</div></div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../../irc/client/data/command/enum.Command.html' title='irc::client::data::command::Command'>Command</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "irc";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script async src="../../../../search-index.js"></script>
+</body>
+</html>
